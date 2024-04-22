@@ -1,0 +1,14 @@
+.container {
+    max-width: 500px;
+    margin: auto;
+  }
+  .card {
+    border-radius: 15px;
+  }
+  .card-header {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }

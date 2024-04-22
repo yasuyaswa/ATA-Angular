@@ -1,0 +1,102 @@
+<div class="container" my-5>
+    <h1>Edit Customer</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="UpdateCustomer()">
+          <div class="mb-3">
+            <label for="customerId" class="form-label">Customer Id</label>
+            <input
+              type="number"
+              class="form-control"
+              id="customerId"
+              name="customerId"
+              readonly
+              [(ngModel)]="CustomerDetails.customerId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerName"
+              name="customerName"
+              [(ngModel)]="CustomerDetails.customerName"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="dob" class="form-label">DOB</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dob"
+              name="dob"
+              [(ngModel)]="CustomerDetails.dob"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <input
+              type="text"
+              class="form-control"
+              id="gender"
+              name="gender"
+              [(ngModel)]="CustomerDetails.gender"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerEmail" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="customerEmail"
+              name="customerEmail"
+              [(ngModel)]="CustomerDetails.customerEmail"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerMobile" class="form-label">Mobile</label>
+            <input
+              type="number"
+              class="form-control"
+              id="customerMobile"
+              name="customerMobile"
+              [(ngModel)]="CustomerDetails.customerMobile"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="customerPassword"
+              name="customerPassword"
+              [(ngModel)]="CustomerDetails.customerPassword"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerAddress" class="form-label">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerAddress"
+              name="customerAddress"
+              [(ngModel)]="CustomerDetails.address"
+            />
+          </div>
+          <button type="button" class="btn btn-danger mr-2" title="Back" [routerLink]="'/Customer'">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="DeleteCustomer(CustomerDetails.customerId)"
+          >
+            <i class="fa fa-trash"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

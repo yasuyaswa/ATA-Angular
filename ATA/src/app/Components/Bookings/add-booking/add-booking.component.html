@@ -1,0 +1,63 @@
+<div class="container" my-5>
+    <h1>Add New Booking</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="AddBooking()">
+          <div class="mb-3">
+            <label for="noofPassenger" class="form-label">Noof Passengers</label>
+            <input
+              type="text"
+              class="form-control"
+              id="noofPassenger"
+              name="noofPassenger"
+              [(ngModel)]="AddBookingRequest.noofPassengers"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="bookingStatus" class="form-label">Booking Status</label>
+            <input
+              type="text"
+              class="form-control"
+              id="bookingStatus"
+              name="gender"
+              [(ngModel)]="AddBookingRequest.bookingStatus"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerId" class="form-label">customerId</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerId"
+              name="customerId"
+              [(ngModel)]="AddBookingRequest.customerId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="vehicleId" class="form-label">Vehicle Id</label>
+            <input
+              type="text"
+              class="form-control"
+              id="vehicleId"
+              name="vehicleId"
+              [(ngModel)]="AddBookingRequest.vehicleId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="routeId" class="form-label">Route Id</label>
+            <input
+              type="email"
+              class="form-control"
+              id="routeId"
+              name="routeId"
+              [(ngModel)]="AddBookingRequest.routeId"
+            />
+          </div>
+          <button type="save" class="btn btn-primary">
+            <i class="fa fa-plus"></i> Create
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

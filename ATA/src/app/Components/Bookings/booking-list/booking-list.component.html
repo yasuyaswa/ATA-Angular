@@ -1,0 +1,40 @@
+<div class="container my-5">
+    <h1 class="text-center">Bookings                →<button class="btn btn-primary" routerLink="/Booking/Add"><i class="fa fa-plus"></i></button></h1>
+    
+    <table class="table table-bordered table-hover" *ngIf="bookings && bookings.length > 0">
+      <thead class="table-dark">
+        <tr>
+          <th class="text-center">Id</th>
+          <th class="text-center">Date</th>
+          <th class="text-center">Noof Passengers</th>
+          <th class="text-center">Booking Status</th>
+          <th class="text-center">Customer Id</th>
+          <th class="text-center">Vehicle Id</th>
+          <th class="text-center">Route Id</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table-light">
+        <tr *ngFor="let user of bookings">
+          <td class="text-center">{{ user.bookingId }}</td>
+          <td class="text-center">{{ user.bookingDate | date:'dd-MM-yyyy'}}</td>
+          <td class="text-center">{{ user.noofPassengers }}</td>
+          <td class="text-center">{{ user.bookingStatus }}</td>
+          <td class="text-center">{{ user.customerId }}</td>
+          <td class="text-center">{{ user.vehicleId }}</td>
+          <td class="text-center">{{ user.routeId}}</td>
+          <td class="text-center">
+            <button class="btn btn-info mr-2" [routerLink]="['/Booking', 'Update', user.bookingId]">
+              <i class="fa fa-eye"></i>
+            </button>
+            <button type="button" class="btn btn-danger" (click)="DeleteCustomer(user.bookingId)">
+              <i class="fa fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="!bookings || bookings.length <= 0" class="text-center">
+      No bookings found
+    </p>
+  </div>

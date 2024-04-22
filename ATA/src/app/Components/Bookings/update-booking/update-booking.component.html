@@ -1,0 +1,73 @@
+<div class="container" my-5>
+    <h1>Edit Booking</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="UpdateBooking()">
+          <div class="mb-3">
+            <label for="noofPassengers" class="form-label">Noof Passengers</label>
+            <input
+              type="number"
+              class="form-control"
+              id="noofPassengers"
+              name="noofPassengers"
+              [(ngModel)]="BookingDetails.noofPassengers"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="bookingStatus" class="form-label">Booking Status</label>
+            <input
+              type="text"
+              class="form-control"
+              readonly
+              id="bookingStatus"
+              name="bookingStatus"
+              [(ngModel)]="BookingDetails.bookingStatus"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="customerId" class="form-label">Customer Id</label>
+            <input
+              type="number"
+              class="form-control"
+              id="customerId"
+              name="customerId"
+              [(ngModel)]="BookingDetails.customerId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="vehicleId" class="form-label">Vehicle Id</label>
+            <input
+              type="text"
+              class="form-control"
+              id="vehicleId"
+              name="vehicleId"
+              [(ngModel)]="BookingDetails.vehicleId"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="routeId" class="form-label">Route Id</label>
+            <input
+              type="number"
+              class="form-control"
+              id="routeId"
+              name="routeId"
+              [(ngModel)]="BookingDetails.routeId"
+            />
+          </div>
+          
+          <button type="button" class="btn btn-danger mr-2" title="Back" [routerLink]="'/Customer'">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="DeleteBooking(BookingDetails.customerId)"
+          >
+            <i class="fa fa-trash"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

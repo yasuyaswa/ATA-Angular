@@ -1,0 +1,14 @@
+body {
+    margin-bottom: 70px; /* Adjust this value based on the height of your footer */
+}
+
+footer {
+    /* position: fixed; */
+    margin-top: 200px;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Replace with your desired background color */
+    color: #fff; /* Replace with your desired text color */
+    padding: 10px;
+    text-align: center;
+}
