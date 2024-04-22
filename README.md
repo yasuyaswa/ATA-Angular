@@ -1,0 +1,1 @@
+Automation Travel Agency is web application to maintain travel services for customers. Customer can book vehicle in the application and it needs Admin approval. Admin will maintain vehicle and drivers.
